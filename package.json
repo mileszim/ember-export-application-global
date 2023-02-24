@@ -1,6 +1,6 @@
 {
-  "name": "ember-export-application-global",
-  "version": "2.0.0",
+  "name": "@mileszim/ember-global",
+  "version": "0.0.1",
   "description": "Sets `window.MyAppName` up as the application instance upon boot.",
   "directories": {
     "doc": "doc",
@@ -13,12 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ember-cli/ember-export-application-global.git"
+    "url": "https://github.com/mileszim/ember-export-application-global.git"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "14.* || >= 16"
   },
-  "author": "Robert Jackson <me@rwjblue.com>",
+  "authors": [
+    "Robert Jackson <me@rwjblue.com>",
+    "Miles Zimmerman <miles@zim.dev>"
+  ],
   "license": "MIT",
   "devDependencies": {
     "ember-cli": "~3.9.0",
@@ -27,9 +30,9 @@
     "ember-cli-htmlbars": "^3.1.0",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-qunit": "^4.6.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-load-initializers": "^2.1.2",
+    "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.2",
     "ember-try": "^1.4.0",
     "loader.js": "^4.0.11"
@@ -37,15 +40,17 @@
   "keywords": [
     "ember-addon"
   ],
-  "dependencies": { },
+  "dependencies": {
+    "@ember/string": "^3.0.1"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
   "main": "index.js",
   "bugs": {
-    "url": "https://github.com/ember-cli/ember-export-application-global/issues"
+    "url": "https://github.com/mileszim/ember-export-application-global/issues"
   },
-  "homepage": "https://github.com/ember-cli/ember-export-application-global",
+  "homepage": "https://github.com/mileszim/ember-export-application-global",
   "resolutions": {
     "**/engine.io": "~3.3.0"
   }

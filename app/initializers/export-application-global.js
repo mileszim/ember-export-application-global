@@ -1,4 +1,4 @@
-import Ember from 'ember';
+import { classify } from '@ember/string';
 import config from '../config/environment';
 
 export function initialize() {
@@ -22,7 +22,7 @@ export function initialize() {
     if (typeof value === 'string') {
       globalName = value;
     } else {
-      globalName = Ember.String.classify(config.modulePrefix);
+      globalName = classify(config.modulePrefix);
     }
 
     if (!theGlobal[globalName]) {
