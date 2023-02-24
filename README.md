@@ -26,9 +26,9 @@ module.exports = function(environment) {
 ## Installation
 
 ```sh
-ember install @mileszim/ember-global
+ember install @mileszim/export-ember-application-global
 # or for ember-cli < 0.1.5
-npm install --save-dev @mileszim/ember-global
+npm install --save-dev @mileszim/export-ember-application-global
 ```
 
 ## Available Configuration
