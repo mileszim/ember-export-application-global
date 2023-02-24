@@ -1,6 +1,7 @@
 {
   "name": "@mileszim/ember-export-application-global",
   "version": "1.0.0",
+  "private": false,
   "description": "Sets `window.MyAppName` up as the application instance upon boot.",
   "keywords": [
     "ember-addon"
@@ -52,7 +53,8 @@
     "rollup-plugin-copy": "^3.4.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "ember": {
     "edition": "octane"
