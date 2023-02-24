@@ -1,0 +1,3 @@
+packages:
+  - 'ember-export-application-global'
+  - 'test-app'

@@ -1,7 +1,7 @@
 # ember-export-application-global
 
-[![Build Status](https://travis-ci.org/ember-cli/ember-export-application-global.svg?branch=master)](https://travis-ci.org/ember-cli/ember-export-application-global)
-[![devDependency Status](https://david-dm.org/ember-cli/ember-export-application-global/dev-status.svg)](https://david-dm.org/ember-cli/ember-export-application-global#info=devDependencies)
+[![Build Status](https://travis-ci.org/mileszim/ember-export-application-global.svg?branch=master)](https://travis-ci.org/mileszim/ember-export-application-global)
+[![devDependency Status](https://david-dm.org/mileszim/ember-export-application-global/dev-status.svg)](https://david-dm.org/mileszim/ember-export-application-global#info=devDependencies)
 [![npm version](https://badge.fury.io/js/ember-export-application-global.svg)](http://badge.fury.io/js/ember-export-application-global)
 
 Sets `window.MyAppName` up as the application instance upon boot.
@@ -9,12 +9,6 @@ Sets `window.MyAppName` up as the application instance upon boot.
 By default this is only done when not running in production mode, but you can fully
 control when it is executed by including `exportApplicationGlobal` in your `config/environment.js`
 with `true` if you want the global exported, or `false` if you do not.
-
-## :warning: Deprecated
-
-`ember-export-application-global` is deprecated. If you still need global access 
-to your application's instance, you could consider making it available on 
-`window` via an [instance initializer](https://guides.emberjs.com/release/applications/initializers/#toc_application-instance-initializers), similar to this addon's implementation.
 
 ## Example Configuration
 
@@ -32,9 +26,9 @@ module.exports = function(environment) {
 ## Installation
 
 ```sh
-ember install ember-export-application-global
+ember install @mileszim/ember-global
 # or for ember-cli < 0.1.5
-npm install --save-dev ember-export-application-global
+npm install --save-dev @mileszim/ember-global
 ```
 
 ## Available Configuration
@@ -47,7 +41,7 @@ npm install --save-dev ember-export-application-global
 
 This README outlines the details of collaborating on this Ember addon.
 
-### Installation
+### Dev Installation
 
 * `git clone <repository-url>` this repository
 * `cd ember-export-application-global`

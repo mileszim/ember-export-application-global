@@ -1,57 +1,33 @@
 {
-  "name": "@mileszim/ember-global",
-  "version": "0.0.1",
-  "description": "Sets `window.MyAppName` up as the application instance upon boot.",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
-  "scripts": {
-    "build": "ember build",
-    "start": "ember server",
-    "test": "ember try:each"
-  },
+  "name": "ember-export-application-global",
+  "version": "0.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mileszim/ember-export-application-global.git"
   },
-  "engines": {
-    "node": "14.* || >= 16"
-  },
-  "authors": [
-    "Robert Jackson <me@rwjblue.com>",
-    "Miles Zimmerman <miles@zim.dev>"
-  ],
   "license": "MIT",
+  "scripts": {
+    "build": "pnpm --filter ember-export-application-global build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
+    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
+    "start:addon": "pnpm --filter ember-export-application-global start --no-watch.clearScreen",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter '*' test"
+  },
   "devDependencies": {
-    "ember-cli": "~3.9.0",
-    "ember-cli-babel": "^7.26.6",
-    "ember-cli-dependency-checker": "^3.2.0",
-    "ember-cli-htmlbars": "^3.1.0",
-    "ember-cli-htmlbars-inline-precompile": "^2.1.0",
-    "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-disable-prototype-extensions": "^1.1.0",
-    "ember-load-initializers": "^2.1.2",
-    "ember-qunit": "^4.6.0",
-    "ember-resolver": "^8.0.2",
-    "ember-try": "^1.4.0",
-    "loader.js": "^4.0.11"
+    "concurrently": "^7.2.1",
+    "prettier": "^2.5.1"
   },
-  "keywords": [
-    "ember-addon"
-  ],
-  "dependencies": {
-    "@ember/string": "^3.0.1"
+  "pnpm": {
+    "overrides": {
+      "@types/eslint": "^7.0.0"
+    }
   },
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
-  },
-  "main": "index.js",
-  "bugs": {
-    "url": "https://github.com/mileszim/ember-export-application-global/issues"
-  },
-  "homepage": "https://github.com/mileszim/ember-export-application-global",
-  "resolutions": {
-    "**/engine.io": "~3.3.0"
+  "engines": {
+    "node": "14.* || >= 16",
+    "pnpm": ">=6.0.0"
   }
 }
