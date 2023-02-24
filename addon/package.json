@@ -1,5 +1,5 @@
 {
-  "name": "@mileszim/export-ember-application-global",
+  "name": "@mileszim/ember-export-application-global",
   "version": "1.0.0",
   "description": "Sets `window.MyAppName` up as the application instance upon boot.",
   "keywords": [

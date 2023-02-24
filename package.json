@@ -1,6 +1,6 @@
 {
-  "name": "ember-export-application-global",
-  "version": "0.0.0",
+  "name": "@mileszim/ember-export-application-global",
+  "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -8,12 +8,12 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "pnpm --filter ember-export-application-global build",
+    "build": "pnpm --filter '@mileszim/ember-export-application-global' build",
     "lint": "pnpm --filter '*' lint",
     "lint:fix": "pnpm --filter '*' lint:fix",
     "prepare": "pnpm build",
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "pnpm --filter ember-export-application-global start --no-watch.clearScreen",
+    "start:addon": "pnpm --filter '@mileszim/ember-export-application-global' start --no-watch.clearScreen",
     "start:test-app": "pnpm --filter test-app start",
     "test": "pnpm --filter '*' test"
   },

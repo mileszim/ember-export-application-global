@@ -1,3 +1,3 @@
 packages:
-  - 'ember-export-application-global'
+  - 'addon'
   - 'test-app'
